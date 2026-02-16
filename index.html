@@ -6,25 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --brand: #6366f1;
-      --brand-darker: #4f46e5; --brand-glow: rgba(99, 102, 241, 0.3);
+      --brand: #6366f1; --brand-darker: #4f46e5; --brand-glow: rgba(99, 102, 241, 0.3);
       --ok: #10b981; --ok-darker: #059669; --ok-glow: rgba(16, 185, 129, 0.3);
-      --warn: #f59e0b; --warn-darker: #d97706;
-      --warn-glow: rgba(245, 158, 11, 0.3);
+      --warn: #f59e0b; --warn-darker: #d97706; --warn-glow: rgba(245, 158, 11, 0.3);
       --info: #06b6d4; --info-darker: #0891b2; --info-glow: rgba(6, 182, 212, 0.3);
-      --danger: #ef4444; --danger-darker: #dc2626;
-      --danger-glow: rgba(239, 68, 68, 0.3);
+      --danger: #ef4444; --danger-darker: #dc2626; --danger-glow: rgba(239, 68, 68, 0.3);
       --primary: #3b82f6; --primary-darker: #2563eb; --primary-glow: rgba(59, 130, 246, 0.3);
-      --history: #8b5cf6; --history-darker: #7c3aed;
-      --history-glow: rgba(139, 92, 246, 0.3);
+      --history: #8b5cf6; --history-darker: #7c3aed; --history-glow: rgba(139, 92, 246, 0.3);
       
       --bg1: #f8fafc; --bg2: #f1f5f9; --text: #1e293b; --muted: #64748b; --border: #e2e8f0;
-      --panel: #ffffff;
-      --shadow: rgba(0, 0, 0, 0.08); --shadow-hover: rgba(0, 0, 0, 0.12);
+      --panel: #ffffff; --shadow: rgba(0, 0, 0, 0.08); --shadow-hover: rgba(0, 0, 0, 0.12);
       
       --dark-bg1: #0f172a; --dark-bg2: #1e293b; --dark-text: #f1f5f9; --dark-muted: #94a3b8;
       --dark-border: rgba(255, 255, 255, 0.1); --dark-shadow: rgba(0, 0, 0, 0.3);
       --dark-panel-bg: rgba(30, 41, 59, 0.7); --dark-component-bg: rgba(15, 23, 42, 0.5);
+      
       --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-xl: 18px;
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,7 +76,7 @@
 
     #stars1 { 
       background-size: 200px 200px; 
-      animation-duration: 120s;
+      animation-duration: 120s; 
       background-image: 
         radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)), 
         radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)), 
@@ -89,7 +85,7 @@
 
     #stars2 { 
       background-size: 300px 300px; 
-      animation-duration: 100s;
+      animation-duration: 100s; 
       background-image: 
         radial-gradient(1px 1px at 150px 120px, #ddd, rgba(0,0,0,0)),
         radial-gradient(1px 1px at 10px 90px, #eee, rgba(0,0,0,0));
@@ -97,7 +93,7 @@
 
     #stars3 { 
       background-size: 400px 400px; 
-      animation-duration: 80s;
+      animation-duration: 80s; 
       background-image: 
         radial-gradient(1px 1px at 180px 140px, #ddd, rgba(0,0,0,0));
     }
@@ -1092,8 +1088,6 @@
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- JSZip library for zip export functionality -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 <body>
   <div id="stars-container">
@@ -1103,26 +1097,10 @@
   </div>
 
   <div class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode"></div>
-
-  <button class="history-toggle btn history-btn" id="historyToggle">
-    <span>📜 History</span>
+<button>
+  <a href="https://youssefderrazcmh8.vercel.app/">multiple headers cleaner </a>
   </button>
 
-  <div class="history-panel" id="historyPanel">
-    <div class="history-header">
-      <h2>Activity History</h2>
-      <button class="close-history btn danger-btn" id="closeHistory">Close</button>
-    </div>
-    <div class="history-categories" id="historyCategories">
-      <div class="history-category active" data-category="all">All Activities</div>
-      <div class="history-category" data-category="cleaned">Cleaned Content</div>
-      <div class="history-category" data-category="htmlInsert">HTML Inserted</div>
-      <div class="history-category" data-category="export">Exported Files</div>
-      <div class="history-category" data-category="subject">Subject Changes</div>
-    </div>
-    <div class="history-items-container" id="historyItems"></div>
-    <div class="clear-history" id="clearHistory">Clear All History</div>
-  </div>
 
   <div class="main-container">
     <div class="content-wrapper">
@@ -1149,14 +1127,14 @@ To: recipient@example.com
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-&lt;title&gt;Test Email&lt;/title&gt;
+    &lt;title&gt;Test Email&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;p&gt;This is a test email content.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</textarea>
 
-            <input id="fileInput" type="file" accept=".txt,.eml,text/*" multiple style="display:none"/>
+            <input id="fileInput" type="file" accept=".txt,.eml,text/*" style="display:none"/>
             <div class="buttons">
               <button class="btn import-btn" id="importBtn">📁 Import</button>
               <button class="btn clean-btn" id="cleanBtn">✨ Clean</button>
@@ -1256,6 +1234,7 @@ To: recipient@example.com
             <div class="output-section">
               <h3>Cleaned STR:</h3>
               <textarea id="output" placeholder="Result will appear here..."></textarea>
+              
               <div class="buttons" style="margin-top: 12px; justify-content: flex-start;">
                 <button class="btn copy-btn" id="copyOutputBtn">📋 Copy Cleaned STR</button>
               </div>
@@ -1283,6 +1262,7 @@ To: recipient@example.com
             <div class="encoding-options">
               <label><input type="radio" name="encodingType" value="base64" checked> Base64</label>
               <label><input type="radio" name="encodingType" value="url"> URL Encoding</label>
+            
               <label><input type="radio" name="encodingType" value="hex"> Hex</label>
               <label><input type="radio" name="encodingType" value="quoted-printable"> Quoted-Printable</label>
             </div>
@@ -1377,6 +1357,7 @@ Here is another IP: 192.168.1.1</textarea>
     // Tab functionality
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
+    
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const tabId = tab.getAttribute('data-tab');
@@ -1444,7 +1425,7 @@ Here is another IP: 192.168.1.1</textarea>
     const outputArea = document.getElementById('output');
     const headersBox = document.getElementById('headersBox');
     
-    const copyOutputBtn = document.getElementById('copyOutputBtn');
+    const copyOutputBtn = document.getElementById('copyOutputBtn'); // <-- ADDED
 
     // Transformation buttons
     const toggleRdns = document.getElementById('toggleRdns');
@@ -1483,41 +1464,17 @@ Here is another IP: 192.168.1.1</textarea>
 
     // Import file functionality
     importBtn.addEventListener('click', () => fileInput.click());
-
-    // UPDATED: Multi-file import logic
     fileInput.addEventListener('change', async (evt) => {
-      const files = evt.target.files; 
-      if (!files || files.length === 0) return;
-
-      let combinedText = "";
-      const separator = "\n\n----------------------------------------\n\n";
-
+      const file = evt.target.files[0]; 
+      if (!file) return;
       try {
-        // Loop through all selected files
-        for (let i = 0; i < files.length; i++) {
-          const text = await files[i].text();
-          
-          // Append filename header for clarity and content
-          combinedText += `[FILE IMPORT: ${files[i].name}]\n` + text;
-          
-          // Add separator if it's not the last file
-          if (i < files.length - 1) {
-            combinedText += separator;
-          }
-        }
-
-        // Set the result to the input area
-        inputArea.value = combinedText;
-        
-        // Reset file input
+        const text = await file.text();
+        inputArea.value = text;
         fileInput.value = '';
-        
-        // Trigger existing logic to parse headers and reset transformations
         buildHeaderCheckboxes();
         resetTransformations();
-        
       } catch (error) {
-        alert('Error reading files: ' + error.message);
+        alert('Error reading file: ' + error.message);
       }
     });
 
@@ -1573,6 +1530,7 @@ Here is another IP: 192.168.1.1</textarea>
       // Separate fixed params from optional params
       const fixedParams = [];
       const optionalParams = [];
+      
       unique.forEach(h => {
         if (FIXED_SELECTED_PARAMS.includes(h)) {
           fixedParams.push(h);
@@ -1832,7 +1790,7 @@ Here is another IP: 192.168.1.1</textarea>
       });
     });
 
-    // ================== UPDATED EXPORT FUNCTIONALITY ==================
+    // Export functionality
     exportBtn.addEventListener('click', () => {
       const text = outputArea.value;
       if (!text.trim()) {
@@ -1840,224 +1798,17 @@ Here is another IP: 192.168.1.1</textarea>
         return;
       }
       
-      // Get the base filename from the input field
-      const baseFilename = document.getElementById('exportFilename').value.replace('.txt', '') || 'cleaned_header';
-      
-      // Ask if user wants separate files or one combined file
-      const exportChoice = confirm("Found multiple sections. Export as:\n\n• OK = Separate numbered files\n• Cancel = Single combined file");
-      
-      if (exportChoice) {
-        // Export as separate numbered files
-        exportSeparateFiles(text, baseFilename);
-      } else {
-        // Export as single combined file
-        exportSingleFile(text, baseFilename);
-      }
-    });
-
-    function exportSeparateFiles(text, baseFilename) {
-      // Split content by separator patterns (looking for import separators or blank lines)
-      const separators = [
-        /\[FILE IMPORT:.*?\]\n/,  // File import headers
-        /\n-{5,}\n/,              // 5+ dashes on a line
-        /\n\*{5,}\n/,             // 5+ asterisks on a line
-        /\n_{5,}\n/               // 5+ underscores on a line
-      ];
-      
-      let sections = [text];
-      
-      // Try each separator pattern
-      for (const separator of separators) {
-        if (separator.test(sections[0])) {
-          sections = sections[0].split(separator);
-          break;
-        }
-      }
-      
-      // Also try splitting by double newline if no other separator found
-      if (sections.length === 1 && sections[0].includes('\n\n')) {
-        sections = sections[0].split(/\n\n+/);
-      }
-      
-      // Clean up sections (remove empty ones, trim whitespace)
-      const cleanSections = sections
-        .map(section => {
-          // Remove file import headers if present
-          section = section.replace(/^\[FILE IMPORT:.*?\]\n/, '');
-          return section.trim();
-        })
-        .filter(section => section.length > 10); // Filter out very short sections
-      
-      if (cleanSections.length <= 1) {
-        alert("No separate sections found. Exporting as single file instead.");
-        exportSingleFile(text, baseFilename);
-        return;
-      }
-      
-      // Ask about empty lines
-      const addEmptyLines = confirm(`Found ${cleanSections.length} sections. Add 5 empty lines between headers?`);
-      
-      // Create ZIP archive
-      createZipArchive(cleanSections, baseFilename, addEmptyLines);
-    }
-
-    function exportSingleFile(text, baseFilename) {
-      // Ask about empty lines
-      const addEmptyLines = confirm("Add 5 empty lines between header sections in the single file?");
-      
-      let processedText = text;
-      
-      if (addEmptyLines) {
-        processedText = addEmptyLinesBetweenHeaders(processedText);
-      }
-      
-      processedText = cleanExtraFormatting(processedText);
-      
-      // Create and download single file
-      const blob = new Blob([processedText], { type: 'text/plain;charset=utf-8' });
+      const filename = document.getElementById('exportFilename').value || 'cleaned_header.txt';
+      const blob = new Blob([text], { type: 'text/plain' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${baseFilename}.txt`;
-      document.body.appendChild(a);
+      a.download = filename.endsWith('.txt') ? filename : filename + '.txt';
       a.click();
-      document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      
-      alert(`Exported: ${baseFilename}.txt`);
-    }
+    });
 
-    function addEmptyLinesBetweenHeaders(content) {
-      const lines = content.split('\n');
-      const result = [];
-      let inHeaderSection = false;
-      
-      lines.forEach((line, index) => {
-        result.push(line);
-        
-        // Check if this is a header line (contains colon but not HTML)
-        if (line.includes(':') && !line.includes('<') && !line.includes('>')) {
-          inHeaderSection = true;
-          
-          // Check if next line exists and doesn't look like continuation or new header
-          if (index < lines.length - 1) {
-            const nextLine = lines[index + 1];
-            const isContinuation = /^\s/.test(nextLine);
-            const isNewHeader = /^[A-Z][a-zA-Z\-]+:/.test(nextLine);
-            const isHTML = nextLine.includes('<') || nextLine.includes('>');
-            
-            if (!isContinuation && !isNewHeader && !isHTML) {
-              // We're transitioning from headers to body, add empty lines
-              result.push('', '', '', '', '');
-              inHeaderSection = false;
-            }
-          }
-        }
-      });
-      
-      return result.join('\n');
-    }
-
-    function cleanExtraFormatting(content) {
-      // Remove excessive empty lines but keep structure
-      let cleaned = content
-        .replace(/\r\n/g, '\n') // Normalize line endings
-        .replace(/\n{4,}/g, '\n\n\n') // Max 3 consecutive empty lines
-        .replace(/[ \t]+$/gm, '') // Remove trailing spaces
-        .replace(/\t+/g, '    ') // Convert tabs to spaces
-        .replace(/^\s+|\s+$/g, ''); // Trim entire content
-      
-      // Ensure there's a blank line before HTML content if not present
-      if (cleaned.includes('<!DOCTYPE') || cleaned.includes('<html')) {
-        if (!cleaned.match(/\n\n\s*<!/) && !cleaned.match(/\n\n\s*<html/)) {
-          cleaned = cleaned.replace(/(\n)(\s*<!(DOCTYPE|html))/i, '$1\n$2');
-        }
-      }
-      
-      return cleaned;
-    }
-
-    function createZipArchive(sections, baseFilename, addEmptyLines) {
-      // Check if JSZip is available
-      if (window.JSZip) {
-        const zip = new JSZip();
-        
-        sections.forEach((section, index) => {
-          let processedSection = section;
-          
-          if (addEmptyLines) {
-            processedSection = addEmptyLinesBetweenHeaders(processedSection);
-          }
-          
-          processedSection = cleanExtraFormatting(processedSection);
-          
-          const fileNumber = String(index + 1).padStart(3, '0');
-          const filename = `${baseFilename}_${fileNumber}.txt`;
-          zip.file(filename, processedSection);
-        });
-        
-        zip.generateAsync({ type: "blob" })
-          .then(function(blob) {
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `${baseFilename}_pack.zip`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            
-            alert(`Successfully exported ${sections.length} files in ${baseFilename}_pack.zip`);
-          })
-          .catch(function(error) {
-            alert("Error creating zip file: " + error.message);
-            // Fallback to individual file downloads
-            downloadFilesIndividually(sections, baseFilename, addEmptyLines);
-          });
-      } else {
-        // JSZip not loaded, download files individually
-        alert("JSZip library not loaded. Downloading files individually instead.");
-        downloadFilesIndividually(sections, baseFilename, addEmptyLines);
-      }
-    }
-
-    function downloadFilesIndividually(sections, baseFilename, addEmptyLines) {
-      let downloadCount = 0;
-      
-      sections.forEach((section, index) => {
-        let processedSection = section;
-        
-        if (addEmptyLines) {
-          processedSection = addEmptyLinesBetweenHeaders(processedSection);
-        }
-        
-        processedSection = cleanExtraFormatting(processedSection);
-        
-        const fileNumber = String(index + 1).padStart(3, '0');
-        const filename = `${baseFilename}_${fileNumber}.txt`;
-        
-        // Create and download individual file
-        const blob = new Blob([processedSection], { type: 'text/plain;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        
-        downloadCount++;
-        
-        // If this is the last file, show alert
-        if (downloadCount === sections.length) {
-          setTimeout(() => {
-            alert(`Downloaded ${downloadCount} individual files.`);
-          }, 500);
-        }
-      });
-    }
-
+    // START: New Code to Add
     // Copy Cleaned STR functionality
     copyOutputBtn.addEventListener('click', () => {
       const textToCopy = outputArea.value;
@@ -2082,6 +1833,7 @@ Here is another IP: 192.168.1.1</textarea>
         alert('Failed to copy. Please try again.');
       });
     });
+    // END: New Code to Add
 
     // Encoder/Decoder Functionality
     const encodeInput = document.getElementById('encodeInput');
@@ -2313,7 +2065,6 @@ Here is another IP: 192.168.1.1</textarea>
             navigator.clipboard.writeText(text).then(() => {
                 const originalText = copyExtractionBtn.textContent;
                 copyExtractionBtn.textContent = 'Copied!';
-                
                 setTimeout(() => {
                     copyExtractionBtn.textContent = originalText;
                 }, 2000);
